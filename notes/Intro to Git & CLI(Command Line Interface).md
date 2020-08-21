@@ -9,6 +9,8 @@
 
 #### **Command Line Basic**
 
+- `>`: overwrite
+- `>>`: append
 - Cd: change directory
   - `cd <folder_name>`: move folder_name
   - `cd` / `cd ~`: move to home directory
@@ -26,6 +28,9 @@
   - `pip install -r requirements.txt`: install all packages that are listed in requirements.txt
 - mv: move
   - `mv <file_name_1> <file_name_2>`: change file_name_1 to file_name_2
+- cat: concatenate
+  - `cat <function name>`: prints the function
+- echo '# thi'
 
 
 
