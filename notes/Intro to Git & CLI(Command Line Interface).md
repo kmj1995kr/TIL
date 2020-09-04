@@ -28,8 +28,13 @@
   - `pip install -r requirements.txt`: install all packages that are listed in requirements.txt
 - mv: move
   - `mv <file_name_1> <file_name_2>`: change file_name_1 to file_name_2
+- rm: remove
+  - `rm <file_name>` or `rm -rf <folder_name>`
 - cat: concatenate
   - `cat <function name>`: prints the function
+- vim: terminal text editor
+  - `vim <file_name>`: 
+  - when exiting out of the vim page: esc + `:x` or `:wq`
 - echo '# thi'
 
 
@@ -68,12 +73,13 @@
 
 - Create a virual environment venv
   - Create a new virtual environment: `python -m venv venv`
+  - if `python -m venv venv` doesn't work, instead, use `pip install virtualenv` --> `virutalenv venv`
   - Direct the repository to this venv -- *this is not needed when the setting is done in the interpreter setting using Pycharm*
     - For Windows: `venv\Scripts\activate`
     - For Mac / Linux: `source venv/bin/activate`
 - `git remote add origin <my_repo_url>`
+  - origin is a servername
 - Checking the connection to the remote repo: `git remote -v`
-- Creating
 
 
 
@@ -102,4 +108,10 @@
 12. Add and commit changes to the remote git repository
     1. Connect to a remote repository: ``git remote add origin <link>``
     2. Push to origin:master: `git push origin master`
+
+
+
+#### Getting Started with Git (Step by Step Cloning a Project)
+
+
 
