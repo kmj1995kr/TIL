@@ -1,4 +1,4 @@
-## Intro to Virtualization
+## Intro to Linux / Virtualization: Linux 설치하기
 
 - 가상화(Virtualization): 기존의 하드웨어 기능들을 소프트웨어적으로 구현해 주는것
   - 대표적으로 VMware가 있음 / 수업에서는 Virtualbox 사용
@@ -34,11 +34,12 @@
 
 3. 하드 디스크 만들기: 하드디스크 종류와 어떤 방식으로 메모리를 할당할지 결정
 
-   1. 하드 디스크 종류
+   1. 하드 디스크 크기설정
+   2. 하드 디스크 종류
       1. VDI
       2. VHD
       3. VMDK
-   2. 메모리 할당 방식
+   3. 메모리 할당 방식
       1. 동적 할당: 할당 해놓은 메모리를 언제든지 바꿀 수 있음
       2. 고정 크기: 필요한 만큼 메모리를 가상 환경에 고정 설정 해놓고 호스트 PC 에서 가상머신을 접근할 수 없게 하는 방식  - 메모리를 많이 차지하지만 더 안정적이고 빠름
 
@@ -84,4 +85,30 @@
       1. Host의 네트워크와 Guest의 네트워크가 동일 (IP 가 같음)
       2. Guest와 외부 네트워크의 직접적인 통신이 가능
 
-3. Ubuntu 운영채제 설치: 파티션 만들기 --> 포맷팅 하기
+5. 시동 디스크 선택: 다운받아 놓은 ubuntu desktop iso 파일 선택
+
+6. Ubuntu 운영채제 설치: 파티션 만들기 --> 포맷팅 하기
+
+   1. 디스크 지우고 Ubuntu 설치 옵션 선택
+   2. 그 외 국가, 언어등등 설정 완료하기
+
+### 가상환경 설치하기 (Setting up Virtual Environment)
+
+1. 소프트 자동 업데이트 기능 끄기
+2. **root 사용자 설정**
+   1. `sudo su` --> password: `ubuntu`
+   2. Root id: root, root pwd: root
+3. ubuntu repository 수정
+4. 방화벽 재기동 및 vim, net-tools 설치
+5. 자세한 정보는 이 블로그에서: https://myanjini.tistory.com/entry/Ubuntu-Desktop-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95
+
+
+
+#### 그 외 설정
+
+1. **디스플레이 설정** (자동 화면 크기 조정): 장치 --> 게스트 확장 CD 이미지 삽입
+2. 클립보드 공유: 장치 --> 양방향
+
+#### 공유 폴더 설정
+
+Host Computer와 Guest Computer간의 공유 설정
