@@ -38,3 +38,35 @@
 - r: read-only
 - w: read & write
 - x: can execute/operate
+
+
+
+#### Virtual Console
+
+- Virtual console is like having a virtual monitor
+- Ubuntu has 7 consoles by default
+- Using the virtual console `ctrl + alt + <F1~F7>`
+
+
+
+#### Run Level
+
+- Number that comes after init - indicates the running status of the system
+- To change the run level ex) `ln -sf /lib/systemd/system/multi-user.target /lib/systemd/system/default.target` --> change the run level from multi-user to default
+
+
+
+![img](https://lh6.googleusercontent.com/jQauZ0LYfiI6InJGEJW1qA988WaD1oC80TWwbHQ_WMvRonnxoufqrxZBsAhfyjvoqTzvGVhkJ7JVMHa3OXxlgH_BXwAw-Yscx6C9iejix9G1TvF-6dlRlC0SFmoHrMqYN9z1IJIn-5w)
+
+1. 
+
+#### VI Editor
+
+- vi editor is included by defeault in all unix, linux systems
+- gedit is a VI editor that is provided in X Window
+
+**To run python codes on terminal:**
+
+- Default shell does not support python
+- Run python with `python3 -i <file_name>`
+
