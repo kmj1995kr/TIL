@@ -129,3 +129,11 @@
 2. Check Serverspec role: `cat ./roles/serverspec/tasks/main.yml`
 3. Install serverspec using ansible-playbook: `ansible-playbook -i development`
 
+
+
+host PC에서 ip 접속 안될 경우 방화벽 체크
+
+`systemctl status firewalld` --> active라면
+
+`sudo systemctl stop firewalld`
+

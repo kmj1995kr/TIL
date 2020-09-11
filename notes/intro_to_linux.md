@@ -58,7 +58,7 @@
 
 ![img](https://lh6.googleusercontent.com/jQauZ0LYfiI6InJGEJW1qA988WaD1oC80TWwbHQ_WMvRonnxoufqrxZBsAhfyjvoqTzvGVhkJ7JVMHa3OXxlgH_BXwAw-Yscx6C9iejix9G1TvF-6dlRlC0SFmoHrMqYN9z1IJIn-5w)
 
-1. 
+
 
 #### VI Editor
 
