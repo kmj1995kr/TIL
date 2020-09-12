@@ -18,6 +18,7 @@
 2. 필요한 파일 다운로드
    - Ubuntu Desktop (GUI): https://ubuntu.com/download/desktop
    - Ubuntu Server (CLI): https://ubuntu.com/download/server
+   - Kubuntu Desktop (GUI): https://kubuntu.org/getkubuntu/
 
 -----
 
@@ -47,50 +48,53 @@
 
    1. **NAT(Network Address Translation)**: 내가 가진 네트워크를 이용해 가상 네트워크를 구축하는 방식
 
-      <img src="/Users/minji/Downloads/nat.png" style="zoom:40%;" />
+      <img src="https://www.nakivo.com/blog/wp-content/uploads/2019/07/VirtualBox-network-modes-%E2%80%93-how-the-NAT-mode-works.png" alt="VirtualBox network modes – how the NAT mode works" style="zoom:50%;" />
 
       1. 호스트 머신을 통해 외부 네트워크로 나갈 수 있음
+
       2. 네트워크 카드 종류가 (NAT 네트워크 대역이) 다름: IP 주소가 다름
+
       3. 외부에서 들어갈때는 port fowarding 방식을 이용해야 함: host machine이 gateway 역할을 함, 그러므로 외부 머신에서는 host machine만 보임
+
       4. 게스트와 호스트 사이의 통신만 가능
          
-
-   2. **NAT Network**
-
-      <img src="/Users/minji/Downloads/nat network.png" style="zoom: 40%;" />
-
-      1. NAT와 동일하나 게스트 사이의 통신도 가능
          
 
-   3. **Internal Network**
+   2. **NAT Network**: NAT와 동일하나 게스트 사이의 통신도 가능
 
-      <img src="/Users/minji/Downloads/internal.png" style="zoom:40%;" />
+      <img src="https://www.nakivo.com/blog/wp-content/uploads/2019/07/VirtualBox-network-settings-%E2%80%93-the-NAT-Network-mode.png" alt="VirtualBox network settings – the NAT Network mode" style="zoom:50%;" />
 
-      1. 게스트 사이의 통신만 가능
-      2. 외부와의 통신은 불가능
-         
+      
 
-   4. **Host-Only Adapter**
+      
 
-      <img src="/Users/minji/Downloads/host-only.png" style="zoom:40%;" />
+   3. **Internal Network**: 게스트 사이의 통신은 가능하지만 외부와의 통신은 불가능(호스트 포함)
 
-      1. 게스트와 호스트 사이의 통신만 가능
-      2. 외부와의 통신은 불가능
-         
+      <img src="https://www.nakivo.com/blog/wp-content/uploads/2019/07/VirtualBox-network-settings-%E2%80%93-using-the-Internal-network-mode-in-a-combination-with-the-NAT-mode.png" alt="VirtualBox network settings – using the Internal network mode in a combination with the NAT mode" style="zoom:50%;" />
+
+      
+
+   4. **Host-Only Adapter**: 게스트와 호스트 사이 통신, 그리고 호스트와 연결되있는 게스트간의 통신이 가능, 외부와의 통신은 불가능
+
+      <img src="https://www.nakivo.com/blog/wp-content/uploads/2019/07/VirtualBox-network-settings-%E2%80%93-VMs-use-the-host-only-network.png" alt="VirtualBox network settings – VMs use the host-only network" style="zoom:50%;" />
 
    5. **Bridge Adapter**
 
-      <img src="/Users/minji/Downloads/bridge.png" style="zoom:40%;" />
+      <img src="https://www.nakivo.com/blog/wp-content/uploads/2019/07/VirtualBox-network-settings-%E2%80%93-bridged-networking.png" alt="VirtualBox network settings – bridged networking" style="zoom:50%;" />
 
       1. Host의 네트워크와 Guest의 네트워크가 동일 (IP 가 같음)
       2. Guest와 외부 네트워크의 직접적인 통신이 가능
+         
 
 5. 시동 디스크 선택: 다운받아 놓은 ubuntu desktop iso 파일 선택
 
 6. Ubuntu 운영채제 설치: 파티션 만들기 --> 포맷팅 하기
 
    1. 디스크 지우고 Ubuntu 설치 옵션 선택
+   
    2. 그 외 국가, 언어등등 설정 완료하기
+   
+      
 
 ### 가상환경 설치하기 (Setting up Virtual Environment)
 
@@ -100,9 +104,28 @@
    2. Root id: root, root pwd: root
 3. ubuntu repository 수정
 4. 방화벽 재기동 및 vim, net-tools 설치
-5. 자세한 정보는 이 블로그에서: https://myanjini.tistory.com/entry/Ubuntu-Desktop-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95
+5. 자세한 정보는 이 블로그에서:
+   - Ubuntu Desktop 설치:https://myanjini.tistory.com/entry/Ubuntu-Desktop-%EC%84%A4%EC%B9%98
+   - Ubuntu Desktop 초기설정: https://myanjini.tistory.com/entry/Ubuntu-Desktop-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95
+   - Ubuntu Server 설치: [https://myanjini.tistory.com/entry/Ubuntu-Server-%EC%84%A4%EC%B9%98](https://myanjini.tistory.com/entry/Ubuntu-Server-설치)
+   - Ubuntu Server 초기설정: [https://myanjini.tistory.com/entry/Ubuntu-Server-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95](https://myanjini.tistory.com/entry/Ubuntu-Server-초기-설정)
 
 
+
+#### Port Forwarding
+
+
+
+![Screen Shot 2020-09-12 at 3.30.55 PM](/Users/minji/Library/Application Support/typora-user-images/Screen Shot 2020-09-12 at 3.30.55 PM.png)
+
+
+
+Host IP: IP of the host machine (can check in mac terminal using `ifconfig`)
+Host Port: assign a port that's not a duplicate
+
+Guest IP: IP of the guest machine
+
+Guest IP: for ssh, assign 22 for guest port
 
 #### 그 외 설정
 

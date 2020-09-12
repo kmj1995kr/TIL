@@ -1,5 +1,12 @@
 ## Intro to Linux
 
+#### Important Concepts & Terminologies
+
+- **Linux**: Free & widely distributed Unix system
+- **Kernel**: The kernel is a [computer program](https://en.wikipedia.org/wiki/Computer_program) at the core of a computer's [operating system](https://en.wikipedia.org/wiki/Operating_system) with complete control over everything in the system
+- **Ubuntu**: Linux distribution based on Debian mostly composed of free and open-source software
+- **Kubuntu**: Official flavour of the Ubuntu operating system that uses the KDE Plasma Desktop instead of the GNOME desktop environment
+
 #### Snapshot: Why use snapshot?
 
 - To save different versions of the same application to run tests in parallel
@@ -57,6 +64,27 @@
 
 
 ![img](https://lh6.googleusercontent.com/jQauZ0LYfiI6InJGEJW1qA988WaD1oC80TWwbHQ_WMvRonnxoufqrxZBsAhfyjvoqTzvGVhkJ7JVMHa3OXxlgH_BXwAw-Yscx6C9iejix9G1TvF-6dlRlC0SFmoHrMqYN9z1IJIn-5w)
+
+
+
+#### Mount
+
+- Mount is like plugging in a CD-ROM into the disk, since there is no physical location to "plug in" the CD-ROM, mount works as a function to execute what's in the CD
+
+**Mount CD-ROM to a specific location**
+
+1. Using VirtualBox, insert a CD-ROM --> which can be found under /dev/cdrom
+2. Mount this CD-ROM: `mount <mount_from> <mount_to>` --> `mount /dev/cdrom /mnt/cdrom `
+3. Use the command `mount` to check the list of all mounted items
+4. Unmount this CD-ROM: `umount <mounted_location>` --> if the location is busy, use `umount -l <mounted_location>` / or move to a different directory where the cdrom is not mounted and try the command again
+
+**Create an ISO file**
+
+1. Check whether genisoimage package exists: `dpkg --get-selections genisoimage`
+2. Using genisoimage package create an iso file: `genisoimage -r -J -o <file_name.iso> <directory_path>`
+   - Ex. `genisoimage -r -J -o boot.iso /boot`
+3. Try mounting the ISO file: `mount -o loop boot.iso /mnt/iso`
+4. Unmount: `umount /mnt/iso`
 
 
 
