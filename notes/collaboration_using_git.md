@@ -84,8 +84,8 @@ git remote -v - shows all the servers that the project is connected to
 **Project를 처음 시작하는 사람**
 
 1. 프로젝트 폴더 만들기: `mkdir <project_name>	`
-
 2. venv 만들기: `python -m venv venv`
+   1. 안될경우: `pip install virtualenv` --> `virtualenv venv`
 3. Activate venv (가상환경 activate): `source venv/Scripts/activate`
 4. Pip list 체크하고 필요한 패키지 설치: `pip list` --> `pip install django django_extensions ipython`
    1. django

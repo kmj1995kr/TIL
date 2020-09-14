@@ -1,14 +1,52 @@
 ## Intro to Docker
 
+#### What is Docker?
+
+- The most popularly distributed container project
+  - Container technology is based on Linux Kernal
+  - Integrate development, testing, management into one process
+- Now supported by AWS, Google Cloud Platform, Microsoft Azure etc.
+- Uses Docker Hub (It's like Github for Docker)
+- 복잡한 리눅스 애플리케이션을 컨테이너로 묶어서 실행할 수 있음
+- With the enhancement in the technology, hardware servers increasily became more capable of supporting mutiple servers on one hardware device
+- Cloud Service: renting out the extra "server spa ce" that's not being used
+
 Sign up to DockerHub: https://hub.docker.com/
 
-Resources: http://pyrasis.com/docker.html
+Resources: 가장 빨리 만나는 Docker: http://pyrasis.com/docker.html
 
-| Virutal Environment      | Container (Docker)                                           |
-| ------------------------ | ------------------------------------------------------------ |
-| (-) File size is too big | (+) Takes out the OS component of the virtual env<br />it uses the host PC's environment and only includes necessary components<br />(+) Easy to distribute<br />(+) Easy to install OS |
+Link to Slides: https://www.slideshare.net/pyrasis/docker-fordummies-44424016?from_action=save9/
+
+| Pros                                                         | Cons                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| - File size small compared to virtual env<br />- Takes out the OS component of the virtual env (don't need to install the entire guest OS to run containers)<br />- Uses the host PC's environment and only includes necessary components<br />- Easy to distribute / share<br />- Easy to install OS<br /> | - There are some losses in functionality --><br />to reduce this problem, CPU started supporting virtualization functionality<br />- Slow speed --> alternate solution Paravirtualization |
+
+Docker vs. Virtual Machine
+
+| Docker                                                       | Virtual Machine                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![Screen Shot 2020-09-14 at 11.19.59 AM](/Users/minji/Desktop/Screen Shot 2020-09-14 at 11.19.59 AM.png) | ![Screen Shot 2020-09-14 at 11.20.28 AM](/Users/minji/Desktop/Screen Shot 2020-09-14 at 11.20.28 AM.png) |
 
 
+
+#### Immutable Infrastructure
+
+- 한번 설치된 것을 업그레이드 하는 것이 아니라 필요에 따라서 바꿔치지 하는 시스템
+- Advantages of imutable infrastructure
+  - Easy to manage: You just have to manage the image
+  - Scalability
+  - Testing
+  - Lightweight
+
+동기 vs. 비동기
+
+동기: One process has to end before the next process starts
+
+- As long as the order is right,
+
+비동기: Processes can run while waiting for the response
+
+- 응답이 왔을때 어떻게 대응해야되는지를 명시해 놔야함 (Call bak function)
 
 #### **Install & Run Images Docker**
 
@@ -29,7 +67,7 @@ Resources: http://pyrasis.com/docker.html
 
 
 
-#### Basic Commans in Docker
+#### Basic Commands in Docker
 
 To pass off commands to the container: `docker exec <command>` --> execute the command inside docker exec
 
