@@ -56,6 +56,7 @@ Start from docker
 
 2. Build an image using the dockerfile: `docker image build -t kmj1995kr/myweb:dockerfile`
 3. Run the container using the created image: `docker container run -d -p 9090:80 --name mywebdockerfile kmj1995kr/myweb:dockerfile`
+   
    - To randomly assign the port: `docker container run -d -P --name mywebdockerfile kmj1995kr/myweb:dockerfile`
 4. Request a webservice through container: `curl http://localhost:9090/hello.html`
 
@@ -74,3 +75,29 @@ Creating a Blog Service with using wordpress & mysql
 1. Create a working directory: `mkdir ~.blog && cd ~/blog`
 2. Run mysql container: `docker run -d --name <name> -e MYSQL_ROOT_PASSWORD=<password> -e MYSQL_DATABASE=<db_name> mysql:5.7`
 3. Run webserver using Wordpress
+
+
+
+## Lab Exercise 2: How to create and run a container and making the data persistent
+
+**Why is this needed?**
+
+- Containers are immutable --> meaning that usually we create containers and remove them when it's not needed, instead of upgrading and re-using the containers
+- When we remove containers, data should remain
+
+**Method 1: Share the Host Volume**
+
+https://docs.google.com/document/d/1-ik6BpcuibHxiqNbilSHrovzALM8G2G2eEFFmVbPxQ4/edit#heading=h.dcw21apv282r
+
+**Method 2: Use a Volume Container (Share the container that has -v option)**
+
+https://docs.google.com/document/d/1-ik6BpcuibHxiqNbilSHrovzALM8G2G2eEFFmVbPxQ4/edit#heading=h.eclxoyi572zt
+
+- Main command: `docker run -it --name <container_name> --volumes-from <source container> <shell>`
+- Ex. `docker run -it --name volume_from_container --volumes-from wordpressdb_hostvolume ubuntu 14:04`
+
+**Method 3: Use docker volume (Volume function in Docker)**
+
+https://docs.google.com/document/d/1-ik6BpcuibHxiqNbilSHrovzALM8G2G2eEFFmVbPxQ4/edit#heading=h.hqzelymuhwff
+
+- If multiple containers share the same volume, they can access the files stored by each other

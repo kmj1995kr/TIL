@@ -27,7 +27,9 @@ Docker vs. Virtual Machine
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![Screen Shot 2020-09-14 at 11.19.59 AM](/Users/minji/Desktop/Screen Shot 2020-09-14 at 11.19.59 AM.png) | ![Screen Shot 2020-09-14 at 11.20.28 AM](/Users/minji/Desktop/Screen Shot 2020-09-14 at 11.20.28 AM.png) |
 
+Containers
 
+- Has to be unique - can't make a new container with the same name,
 
 #### Immutable Infrastructure
 
@@ -38,15 +40,15 @@ Docker vs. Virtual Machine
   - Testing
   - Lightweight
 
-동기 vs. 비동기
+##### Synchronous (동기)  vs. Asynchronous (비동기)
 
-동기: One process has to end before the next process starts
+Synchronous: One process has to end before the next process starts
 
 - As long as the order is right,
 
-비동기: Processes can run while waiting for the response
+Asynchronous: Processes can run while waiting for the response
 
-- 응답이 왔을때 어떻게 대응해야되는지를 명시해 놔야함 (Call bak function)
+- 응답이 왔을때 어떻게 대응해야되는지를 명시해 놔야함 (Call back function)
 
 #### **Pull, Install & Run Images Docker**
 
@@ -136,6 +138,10 @@ To pass off commands to the container: `docker exec <command>` --> execute the c
 - Example: `docker container ls -a --format "table {{.ID}} : {{.Names}}\t{{.Command}}"`
 
 **Docker container stat**: `docker container stats`
+
+
+
+#### Using Docker-Compose
 
 
 
