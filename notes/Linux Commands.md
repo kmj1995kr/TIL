@@ -16,6 +16,7 @@
 - pipe (|): connecting two different programs
 
   - ex. `ls -l /etc | less` : show results from `ls -l /etc` in a less mode (being able to scroll up and down) 
+  - ex. `apt list | grep nginx`: show results from apt list that contains the word nginx
 
 ---
 
@@ -75,6 +76,8 @@ Package Related Commands
 
 - `apt`
   - `apt-get <package_name>`: install a new package named package_name
+  - `sudo apt-get update`: update apt packages
+  - `sudo apt-get upgrade`
 - `vim`: terminal text editor
   - `vim <file_name>`: 
   - when exiting out of the vim page: esc + `:x` or `:wq`

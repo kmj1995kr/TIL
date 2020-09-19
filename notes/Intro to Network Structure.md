@@ -5,11 +5,22 @@
 **TCP/IP**
 
 - A **protocol** is a standard set of rules that allow electronic devices to communicate with each other
-- **TCP/IP** is one of the most widely used protocol
+- **TCP/IP** is one of the most widely used protocol, 
+- **An IP addres**s is a 32-bit number that uniquely identifies a host (computer or other device, such as a printer or router) on a TCP/IP network.
+- **Subnet Mask** is used to determine whether the host is on the local subnet or on a remote network
+  - It's used to determine exactly what device within a network the address is referring to
+  - It's usually the second half or the last quarter portion of the ip address
 - `ifconfig`: to check ip related information
 - inet: ip address
-- netmask: subnet mask address
 - To check ip information for a designated network: `ifconfig enp0s3`
+
+**Gateway**
+
+- The gate which the information flows in and out of the network
+- It's a hub that connects the the hosts within one network to the hosts in another network
+- `ip route` can show gateway information
+
+**DNS Server**: translates alphabetical address into ip address
 
 **Host Name & Domain Name**
 
@@ -20,15 +31,11 @@
 - **FQDN** (Fully Qualified Domain Name) - Naming convention that uniquely identifies the host within a domain (ex. cookbook.hanbit.co.kr)
 - ISO OSI 7 layer
 
-**Gateway**
-
-- The gate which the information flows in and out of the network
-- It's a hub that connects the the hosts within one network to the hosts in another network
-- `ip route` can show gateway information
+- 
 
 **Network Address / Braodcast Address / Netmask**
 
-**DNS Server**
+
 
 - 
 
