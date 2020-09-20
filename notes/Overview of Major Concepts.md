@@ -11,11 +11,13 @@
 
 #### Network
 
-IP
+- **An IP address** is a 32-bit number that uniquely identifies a host (computer or other device, such as a printer or router) on a TCP/IP network.
 
-Subnet Mask
+- **Subnet Mask** is used to determine whether the host is on the local subnet or on a remote network
+  - It's used to determine exactly what device within a network the address is referring to
+  - It's usually the second half or the last quarter portion of the ip address
 
-Gateway
+- **Gateway**: The gate which the information flows in and out of the network
 
-DNS
+- **DNS Server**: translates alphabetical address into ip address
 

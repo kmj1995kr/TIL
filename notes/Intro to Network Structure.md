@@ -31,13 +31,9 @@
 - **FQDN** (Fully Qualified Domain Name) - Naming convention that uniquely identifies the host within a domain (ex. cookbook.hanbit.co.kr)
 - ISO OSI 7 layer
 
-- 
-
 **Network Address / Braodcast Address / Netmask**
 
 
-
-- 
 
 ### Commands related to network setting
 

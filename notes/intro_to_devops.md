@@ -25,6 +25,8 @@
 
 **Vagrant**: Vagrant is an open-source software product for building and maintaining portable virtual software development environments
 
+Details: https://docs.google.com/document/d/1-ik6BpcuibHxiqNbilSHrovzALM8G2G2eEFFmVbPxQ4/edit#heading=h.l625pp4r7ecp
+
 *To be able to use VirtualBox 6.1, you must use Vagrant 2.2.1 or higher*
 
 1. Power off all other virtual environments

@@ -130,5 +130,3 @@ https://m.blog.naver.com/PostView.nhn?blogId=jgh815&logNo=30144306782&proxyRefer
 4. Try mounting the ISO file: `mount -o loop boot.iso /mnt/iso`
 5. Unmount: `umount /mnt/iso`
 
-
-
