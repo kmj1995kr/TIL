@@ -21,3 +21,11 @@
 
 - **DNS Server**: translates alphabetical address into ip address
 
+
+
+- **Service**: Groups the pods together in distribution
+  - Outside machines only need to the service IP to access all the pods inside the service
+
+
+
+![service diagram](/Users/minji/Downloads/service diagram.png)
