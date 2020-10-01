@@ -30,21 +30,54 @@ Details: https://docs.google.com/document/d/1-ik6BpcuibHxiqNbilSHrovzALM8G2G2eEF
 *To be able to use VirtualBox 6.1, you must use Vagrant 2.2.1 or higher*
 
 1. Power off all other virtual environments
+
 2. Install Vagrant
+
 3. Create a working directory `mkdir ~/HashiCorp/WorkDir`
+
 4. Create Vagrantfile: inside WorkDir `vagrant init`
+
 5. Edit Vagrantfile
-6. Create a new virtual machine and run it
+
+   ```bash
+   # -*- mode: ruby -*-
+   # vi: set ft=ruby :
+   
+   Vagrant.configure("2") do |config|
+     config.vm.box = "generic/centos7"  #base image to be used
+     config.vm.hostname = "minji"				 #host_name
+     config.vm.network "private_network", ip: "192.168.33.10"		#ip of the VM
+     config.vm.synced_folder ".", "/home/vagrant/sync", disabled: true		#sync options with the host machine
+   end
+   ```
+
+   
+
+6. Create a new virtual machine and run it: `vagrant up`
+
 7. Run and go into the new virtual machine
    - Use VirtualBox
    - Use terminal: `vagrant ssh`
    - Use ssh client (e.g. Putty)
-8. Create snapshots: `vagrant snapshot --save`
+
+8. Basic Vagrant Commands
+
+   1. Create snapshots: `vagrant snapshot --save`
+   2. Turn off vagrant VM: `vagrant halt`
+   3. Print username: `whoami`
+   4. Print hostname: `uname -n`
+
 9. Delete vagrant: `vagrant destroy` - same as delete all files on VirtualBox
 
 
 
-##### Pros and Cons of Vagrant
+##### Why use Vagrant instead of VM created from ISO Images? (Pros of Infrastructure as Code)
+
+*Creation --> Setting --> Maintanence in one*
+
+- Can easily share environments
+- Can easily figure out different settings in the environments (all laid out in the vagrant code)
+- Can easily maintain the environment
 
 
 

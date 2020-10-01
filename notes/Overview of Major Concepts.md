@@ -11,7 +11,9 @@
 
 #### Network
 
-- **An IP address** is a 32-bit number that uniquely identifies a host (computer or other device, such as a printer or router) on a TCP/IP network.
+[Intro to Network Structure](./intro_to_network_structure)
+
+**An IP address** is a 32-bit number that uniquely identifies a host (computer or other device, such as a printer or router) on a TCP/IP network.
 
 - **Subnet Mask** is used to determine whether the host is on the local subnet or on a remote network
   - It's used to determine exactly what device within a network the address is referring to
@@ -29,3 +31,17 @@
 
 
 ![service diagram](/Users/minji/Downloads/service diagram.png)
+
+
+
+#### DevOps
+
+**Infrastructure as Code**: Codifying local development environment so that it can be easily shared and managed
+
+- Easy to share
+- Easy to maintain
+- Easily to configure
+
+**Vagrant**: Infrastructure as Code를 구현하는 가상 환경 구축 도구
+
+- OS 가상머신의 생성, 구축, 설정을 Vagrantfile을 통해 기술할 수 있음
