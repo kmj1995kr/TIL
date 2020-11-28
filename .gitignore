@@ -1,5 +1,5 @@
-.idea/
-
+.idea/  
+ 
 # Created by https://www.toptal.com/developers/gitignore/api/python,jupyternotebooks
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,jupyternotebooks
 
@@ -26,7 +26,7 @@ __pycache__/
 # C extensions
 *.so
 
-# Distribution / packaging
+# Distribution / packaging 
 .Python
 build/
 develop-eggs/
@@ -41,6 +41,7 @@ sdist/
 var/
 wheels/
 pip-wheel-metadata/
+hi/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
