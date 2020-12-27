@@ -2,7 +2,11 @@
 #### Topics that I've Learned (My Tech Stack)
 
 ```
-Frontend
+Languages
+- Python
+- HTML / CSS / Javascript
+
+Frontend (Framework)
 - Vue
 - Bootstrap
 
