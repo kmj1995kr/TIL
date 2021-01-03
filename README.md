@@ -1,4 +1,4 @@
-# TIL
+# TIL 
 #### Topics that I've Learned (My Tech Stack)
 
 ```
@@ -18,7 +18,7 @@ Serverside
 - Amazon AWS
 - Docker
 - Kubernetes
-```
+```. 
 
 
 
@@ -49,4 +49,4 @@ Cloud - Docker / K8s
 
 
 
-Special thanks to Multicampus Cloud Buddies ❤️ 
+Special thanks to Multicampus Cloud Buddies ❤️ ❤️
