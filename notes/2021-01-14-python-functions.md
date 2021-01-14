@@ -31,6 +31,8 @@
 
    Ex ) `random.choice([list])`
 
+> 주의사항: Module 이름과 충돌이 날 수 있는 폴더 / 파일 이름은 만들지 않기!
+
 Ex) Random
 
 ```python
