@@ -11,6 +11,7 @@
 #### 요청 (Request)
 
 - Client에서 정보를 요청하는 일
+- GET: 요청을 통해 원하는 정보를 받아오는 일 (주소창을 통해 요청하는 모든 것)
 
 #### 응답 (Response)
 
@@ -19,8 +20,18 @@
   - 20X - 정상요청
   - 40X - 잘못된 리퀘스트
   - 50X - 서버에러
+- 보통 웹에서 응답을 받아올때는 json 형식으로 된 데이터를 받아온다 (json != dict)
+  - JSON은 Python에 dict랑 형태는 똑같지만 String으로 인식되기때문에 json.loads같은 함수가 필요하다
 
+### 정보를 얻어오는 방법
 
+1. 웹 크롤링: 웹에서 필요한 정보를 스크래핑 해서 가져오는 것
+   - HTML / CSS에서 selector를 사용해 원하는 정보를 뽑아오는 것
+2. API: 형식에 기반한 정보 교환
+   - Ex) Data.go.kr
+   - JSON, XML, CSV 등등의 형식으로 되어있음
+   - 요청 형식에 맞춰서 요청을 보내면 원하는 데이터를 응답값으로 전달해준다
+   - 요청 횟수, 요청 방식 (Key)이 제한되어 있는 경우가 많음
 
 ### Requests를 사용해서 정보 요청하기 (웹 크롤링)
 
@@ -47,7 +58,8 @@ status = requests.get('url').status_code
 3. 뽑아온 selector를 활용해 정보를 가져온다
 
 ```python
-
+soup = BeautifulSoup(data, 'html.parser')
+kospi = soup.select_one('#KOSPI_now')
 ```
 
 
@@ -64,12 +76,6 @@ requests.get('https://finance.naver.com/main/main.nhn').text
 requests.get('url').status_code
 
 ```
-
-
-
-
-
-
 
 
 
