@@ -18,7 +18,7 @@ Serverside
 - Amazon AWS
 - Docker
 - Kubernetes
-```. 
+```
 
 
 
