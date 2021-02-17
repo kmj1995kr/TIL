@@ -1,7 +1,7 @@
 # TIL     
 #### Topics that I've Learned (My Tech Stack)
 
-```python
+```
 Languages
 - Python
 - HTML / CSS / Javascript
@@ -22,8 +22,7 @@ Serverside
 Algorithm
 - Data Types and Usage
 - Sorting & Searching Algorithm
-​```
-
+```
 
 
 #### Remaining Items to Organize
@@ -49,10 +48,5 @@ Cloud - AWS
 
 Cloud - Docker / K8s
 
-```
-
-
 
 Special thanks to Multicampus Cloud Buddies ❤️ ❤️
-
-```
