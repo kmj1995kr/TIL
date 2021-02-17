@@ -22,7 +22,7 @@ Serverside
 Algorithm
 - Data Types and Usage
 - Sorting & Searching Algorithm
-​```. 
+​```
 
 
 
