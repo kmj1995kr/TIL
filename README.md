@@ -18,7 +18,11 @@ Serverside
 - Amazon AWS
 - Docker
 - Kubernetes
-```. 
+
+Algorithm
+- Data Types and Usage
+- Sorting & Searching Algorithm
+​```. 
 
 
 
@@ -50,3 +54,5 @@ Cloud - Docker / K8s
 
 
 Special thanks to Multicampus Cloud Buddies ❤️ ❤️
+
+```
