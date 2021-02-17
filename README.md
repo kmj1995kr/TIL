@@ -27,6 +27,7 @@ Algorithm
 
 #### Remaining Items to Organize
 
+```
 Frontend
 [] Vue (More updates with SSAFY)
 [] Working with AWS Javascript SDK (Uploads to S3)
@@ -47,6 +48,6 @@ Cloud - AWS
 [] Dealing with CORS Errors
 
 Cloud - Docker / K8s
-
+```
 
 Special thanks to Multicampus Cloud Buddies ❤️ ❤️
