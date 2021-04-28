@@ -80,4 +80,3 @@ class Article(models.Model):
 >>> python manage.py migrate
 ```
 
-

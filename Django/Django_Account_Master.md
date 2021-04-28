@@ -9,6 +9,7 @@
 2. 회원가입 로직을 담당할 **view** 함수 생성
    - **GET**: 회원가입 폼 띄워주기
    - **POST**: 회원가입 폼을 전송하고 회원생성
+     - ModelForm 이기 때문에 이미 모델에 대한 정보를 포함하고 있음, request가 따로 필요 없음
 
 ```python
 from django.shortcuts import render, redirect
@@ -176,7 +177,38 @@ def delete(request):
 
 
 
-### 6. 완성된 urls, views, templates
+### 6. User Change Password
+
+1. **urls.py** 에서 회원 정보 수정 페이지 경로 추가 (완성된 urls.py 참고)
+2. 패스워드 수정 로직을 담당할 **view** 함수 생성
+   - **GET**: 패스워드 수정 폼 띄워주기
+   - **POST**: 수정된 정보를 저장
+     - 현재 유저에 대한 정보가 필요함 (수정을 위해서)
+     - 수정 후 메인 페이지로 redirect
+   - 로그인 된 유저만 접속할 수 있게 해야함
+   - 현재 유저에 대한 instance를 받아와야함 (새로운 유저가 아니라 현재 유저에 대한 정보를 수정하는 것이기 때문에)
+
+```python
+@login_required
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            form.save()
+            print(form.user)
+            update_session_auth_hash(request, form.user)
+            return redirect('accounts:index')
+    else:
+        form = PasswordChangeForm(request.user)
+    context = {
+        'form': form,
+    }
+    return render(request, 'accounts/forms.html', context)
+```
+
+
+
+### 7. 완성된 urls, views, templates
 
 ```python
 # urls.py

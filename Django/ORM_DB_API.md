@@ -33,6 +33,16 @@ Database와 소통하기 위한 도구
 - Update (수정)
 - Delete (삭제)
 
+#### 
+
+##### 추가설정: Shell Plus 
+
+shell_plus를 활용해 shell에서 orm objects CRUD 가능
+
+```python
+python manage.py shell_plus --prinit-sql
+```
+
 
 
 ### 장고의 Queryset API를 활용한 CRUD 처리
