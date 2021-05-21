@@ -1,53 +1,134 @@
-# Javascript DOM Selector (선택자)
+# Javascript 기초 문법 1: 변수 , 데이터 타입
 
-### DOM이란?
+### 변수 선언하기
 
-**HTML** 요소들을 **구조화해서 표현한 인터페이스**, 프로그래밍 언어를 통해 DOM 구조에 쉽게 접근할 수 있는 방법을 제공하여 문서의 구조, 스타일, 내용등을 변경할 수 있도록 돕는다.
+#### var vs. const vs. let
 
-대표적으로 Javascript를 활용해 DOM의 각 object에 접근하여 선택, 수정할 수 있다.
+`var`: ES6 이전에 쓰였던 유일한 변수 선언법으로 ES6 이후로는 사용이 권장되지 않고 있다
+
+`const`: constant의 줄임말로, 변하지 않는 값을 저장할때 주로 사용되므로 재선언, 재할당이 둘다 허용되지 않는다
+
+`let`: 재선언은 불가능하지만 재할당은 가능하다
+
+|                 | const                              | let                              | var                            |
+| --------------- | ---------------------------------- | -------------------------------- | ------------------------------ |
+| 재선언 / 재할당 | 재선언: 불가능<br />재할당: 불가능 | 재선언: 불가능<br />재할당: 가능 | 재선언: 가능<br />재할당: 가능 |
+| 스코프**        | 블럭 스코프                        | 블럭 스코프                      | 함수 스코프                    |
 
 
 
-### querySelector / querySelectorAll
-
-- Class, Id, TagName 등등 **다양한 속성을 통해 DOM**을 가져올 수 있다
-- querySelector는 **단일 Object** (여러개가 있다면 그 중 첫번째 조건에 부합하는 object)를 가져온다
-- querySelectorAll은 조건에 맞는 **모든 Object**를 **NodeList**의 형태로 가져온다
+위와 같은 차이점을 코드로 봤을때는 이런 형태이다
 
 ```javascript
-// 첫 번째 일치하는 요소 가져오기
-const selectOneByClass = document.querySelector('.myclass')
-const selectOneById = document.querySelector('#myid')
-const selectOneByTag = document.querySelector('body > h1')
+const a = 1
+const a = 2 // 재선언: 에러
+a = 3 // 재할당: 에러
 
-// 모든 요소 가져오기
-const selectAllByClass = document.querySelectorAll('.myclass')
-const selectAllById = document.querySelectorAll('#myid')
-const selectAllByTag = document.querySelectorAll('body > h1')
+let b = 1
+let b = 2 // 재선언: 에러
+b = 3 // 재할당: 가능
+
+var c = 1
+var c = 2 // 재선언: 가능
+c = 3 // 재할당: 가능
+```
+
+#### 변수를 선언하는 다양한 문법
+
+Javascript에서는 변수 선언하고 할당하는 행위가 나눠져 있다
+
+- **Declaration** (선언): 변수 (껍데기) 생성하는 것
+- **Assignment** (할당): 선언된 변수에 실제 값을 저장하는 것
+- **Initialization** (초기화): 변수에 처음에 값을 저장하는 시점 또는 행위
+
+```javascript
+// 선언과 할당을 개별적으로 하는 코드
+// 1. 선언
+let a
+// 2. 할당
+a = 1 // 초기화 시점
+
+// 선언과 할당을 동시에 하는 코드
+let b = 2 // 초기화 시점
 ```
 
 
 
-### getElementBy
+### 데이터 타입
 
-- Class, Id, TagName 별로 DOM을 가져올 수 있다
-- **getElementById**: 해당 아이디를 가진 단일 객체를 가져온다
-- **getElementByClass**: 해당 클래스를 가진 객체를 HTMLCollection의 형태로 모두 가져온다
-- **getElementByTagName**: 해당 TagName을 가진 객체를 HTMLCollection의 형태로 모두 가져온다
+#### primitive vs. reference
+
+크게 Primitive Type과 Reference Type 두가지로 나뉜다
+
+|      | Primitive Type                                               | Reference Type                                               |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 특징 | - Object가 아닌 기본 타입<br />- 실제 값 자체가 담긴다<br />- 복사시 실제 값이 담긴다 | - Object 형태<br />- 값의 주소가 저장된다<br />- 복사시 참조 값이 복사된다 |
+| 예시 | 숫자, 문자열, undefined, null, Boolean                       | 객체(object), 함수(function), 배열(array)                    |
+
+#### 할당 연산자
+
+데이터에 연산을 하면서 새로운 값을 할당하는 연산자이다
 
 ```javascript
-const byId = document.querySelector('myid')
-const byClass = document.querySelector('myclass')
-const byTagName = document.querySelector('h1')
+let x = 0
+
+// 파이썬과 동일하게 다음과 같은 연산을 할 수 있다
+x += 1
+x -= 1
+x *= 10
+x /= 10
+
+// x의 값을 1씩 증가 또는 감소 시키는 다음과 같은 연산도 할 수 있다
+// 주로 for, while loop에서 값을 1씩 증가시키면서 looping을 할때 쓰인다
+x++
+x--
 ```
 
 
 
-### querySelector vs. getElementBy
+#### 비교 연산자
 
-| querySelector                                                | getElementBy                                                 |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| - Class, Id, TagName에 상관없이 동일한 querySelector 메서드를 쓸 수 있다<br />- querySelectorAll의 경우 NodeList로 결과 반환 (Static) | - Class, Id, TagName에 따라서 알맞는 메서드를 사용해야한다<br />- 여러 객체 반환시 HTML Collection으로 결과 반환 (Live) |
+Javascript에서는 두가지 타입의 비교연산이 존재한다
+
+- **동등 비교 연산자 (==)**: Javascript에서 내부적으로 형변환이 진행되어, 형 변환 된 값이 같은지 다른지를 비교한다
+
+  - Boolean 값과 비교시 각 데이터 타입은 다음과 같이 변환된다 (<a href="https://tc39.es/ecma262/#sec-ecmascript-language-types-boolean-type">출처</a>)
+
+    | Type      | false         | true            |
+    | --------- | ------------- | --------------- |
+    | Undefined | 항상          | X               |
+    | Null      | 항상          | X               |
+    | Boolean   | false         | true            |
+    | Number    | +0, -0, NaN   | 그 외 모든 경우 |
+    | String    | 빈 문자열("") | 그 외 모든 경우 |
+    | Symbol    | X             | 항상            |
+    | BigInt    | 0             | 그 외 모든 경우 |
+    | Object    | X             | 항상            |
+
+- **일치 비교 연산자 (===)**: 형변환을 하지 않고, 엄격한 비교(데이터의 값과 타입을 모두 비교)가 이루어진다
+
+#### 논리 연산자
+
+- `&&`: and 연산자
+- `||`: or 연산자
+- `!`: not 연산자
+- 단축 평가를 지원한다: 비교 대상중 하나만 비교했을때도 그 결과값을 알 수 있을때, 더 이상 비교를 진행하지 않고 바로 결과값을 반환
 
 
+
+#### 삼항 연산자
+
+- 세 개의 피연산자를 사용해 true / false 여부에 따라 값을 반환하는 연산자
+- `(a ? b : c)`: a의 조건식이 참이라면 b를 반환, 거짓이라면 c를 반환
+
+```javascript
+console.log(true ? 1 : 2) // true
+```
+
+python 문법에서 다음과 동일하다
+
+```python
+a = true
+print(1 if a==True else 2)
+```
 

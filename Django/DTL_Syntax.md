@@ -30,7 +30,7 @@
 
 ```python
 def greetings(request):
-  foods = ['apple', 'banana', 'coconut']
+  foods = ['apple', 'banana', 'coconut',]
   context = {
     'name': 'Minji',
     'foods': foods,
