@@ -2,11 +2,11 @@
 
 ### 변수의 타입
 
-| 원시 타입 (Primitive Type)                                   | 참조 타입 (Reference Type) |
-| ------------------------------------------------------------ | -------------------------- |
-| - byte<br />- short / long<br />- int<br />- double<br />- float<br />- char<br />- boolean<br />- String | - array                    |
+| 원시 타입 (Primitive Type)                                   | 참조 타입 (Reference Type)                                   |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| - byte<br />- short / long<br />- int<br />- double<br />- float<br />- char<br />- boolean<br /> | - String<br />- Scanner<br />- Random<br />- int[]<br />- String[]<br />- object |
 
-### 원시 타입 변수 선언 문법
+### 기본적인 변수 선언 문법
 
 - 지역 변수 (main 함수 안): `<type> <변수_이름> = <값>` 의 형태로 변수를 선언할 수 있다
 - 전역 변수 (main 함수 밖): static 키워드를 붙여서 전역 변수를 선언 할 수 있다 
