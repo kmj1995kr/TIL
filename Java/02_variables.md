@@ -4,9 +4,12 @@
 
 | 원시 타입 (Primitive Type)                                   | 참조 타입 (Reference Type)                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| - 값이 저장된다<br />- 매개변수로 전달했을 경우 원본 값에는 영향을 주지 않는다 | - 주소값이 저장된다<br />-  매개변수로 전달했을 경우 주소값에 저장된 원본 값이 바뀐다 |
 | - byte<br />- short / long<br />- int<br />- double<br />- float<br />- char<br />- boolean<br /> | - String<br />- Scanner<br />- Random<br />- int[]<br />- String[]<br />- object |
 
-### 기본적인 변수 선언 문법
+
+
+### 기초적인 변수 선언 문법
 
 - 지역 변수 (main 함수 안): `<type> <변수_이름> = <값>` 의 형태로 변수를 선언할 수 있다
 - 전역 변수 (main 함수 밖): static 키워드를 붙여서 전역 변수를 선언 할 수 있다 
@@ -53,7 +56,7 @@ public static void main(String[] args) {
 
 
 
-### input을 입력받는 방법
+### input을 입력받는 방법 (기초)
 
 변수를 입력해주는 방법도 있지만, 사용자로 부터 input을 받아야 되는 상황이 많이 있다. Java에서는 input을 입력 받기 위해 다양한 방법을 사용할 수 있는데 그 중 가장 간단한 방법 중 하나인 Scanner를 사용해서 input을 받을 수 있다.
 
@@ -70,15 +73,15 @@ import java.util.Scanner
 public class Code {
   
   public static void main(String[] args) {
-    Scanner kb = new Scanner( System.in ); // 새로운 스캐너 생성
+    // 파이썬에서 kb = input()과 같음
+    // 자바에서는 input을 받는 scanner 부분과 input을 처리하는 부분이 따로 작성됨
+    Scanner kb = new Scanner(System.in); // 새로운 스캐너 생성
     int input = kb.nextInt(); // 입력받은 정수를 변수에 할당
     kb.close(); // 스캐너 사용이 완료되면 스캐너를 종료하기
   }
   
 }
 ```
-
-
 
 **문자열 입력 받기**
 
