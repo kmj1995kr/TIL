@@ -50,4 +50,4 @@ Cloud - AWS
 Cloud - Docker / K8s
 ```
 
-Special thanks to Multicampus Cloud Buddies ❤️ ❤️
+Special thanks to Multicampus Cloud Buddies ❤️❤️❤️
