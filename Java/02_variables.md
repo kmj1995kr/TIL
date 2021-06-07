@@ -4,8 +4,8 @@
 
 | 원시 타입 (Primitive Type)                                   | 참조 타입 (Reference Type)                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| - 값이 저장된다<br />- 매개변수로 전달했을 경우 원본 값에는 영향을 주지 않는다 | - 주소값이 저장된다<br />-  매개변수로 전달했을 경우 주소값에 저장된 원본 값이 바뀐다 |
-| - byte<br />- short / long<br />- int<br />- double<br />- float<br />- char<br />- boolean<br /> | - String<br />- Scanner<br />- Random<br />- int[]<br />- String[]<br />- object |
+| - 값이 저장된다<br />- 매개변수로 전달했을 경우 원본 값에는 영향을 주지 않는다 | - 주소값이 저장된다<br />-  매개변수로 전달했을 경우 주소값에 저장된 원본 값이 바뀐다<br />- Primitive Type이 아닌 모든 다른 타입들 |
+| - byte<br />- short / long<br />- int<br />- double<br />- float<br />- char<br />- boolean<br /> | - String<br />- Scanner<br />- Random<br />- int[]<br />- String[]<br />- object<br />- 사용자 정의 타입<br /> |
 
 
 
