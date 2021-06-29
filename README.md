@@ -5,6 +5,7 @@
 Languages
 - Python
 - HTML / CSS / Javascript
+- Java
 
 Frontend (Framework)
 - Vue
@@ -13,6 +14,8 @@ Frontend (Framework)
 Backend
 - Django
 - Django REST Framework
+- JSP
+- Database (PL/SQL, MySQL)
 
 Serverside
 - Amazon AWS
