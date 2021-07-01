@@ -1,5 +1,19 @@
 # Django로 웹사이트 만들기 1: 프로젝트 시작하기
 
+### 프로젝트 목표
+
+앞으로 Django를 활용해서 간단한 카페 찾기 / 리뷰 웹사이트를 구현하면서 장고로 웹사이트 구축하는 과정을 정리하고 기록으로 남겨보기로 했다.
+
+- 카페 리뷰 게시판 구현 (CRUD)
+- 카페 검색 기능
+- 카페 좋아요 / 저장 기능 구현
+- 지도로 카페 위치 표시
+- 로그인 기능 구현
+
+
+
+프로젝트를 시작하기에 앞서 간단히 Django란 무슨 프레임워크인지, 어떻게 동작하는지, 그리고 기본적인 환경설정을 하는 방법을 먼저 정리해보았다.
+
 #### Static vs. Dynamic Website
 
 **Static**: 정해진 것 만을 제공해 주는 웹사이트
@@ -66,10 +80,10 @@ $ pip install -r requirements.txt
 $ django-admin startproject <project_name>
 ```
 
-crud라는 이름의 프로젝트를 만드려면:
+find_my_cafe 라는 이름의 프로젝트를 만드려면:
 
 ```bash
-$ django-admin startproject crud
+$ django-admin startproject find_my_cafe
 ```
 
 
@@ -81,7 +95,7 @@ $ django-admin startproject crud
 1. 앱을 생성한다: articles와 accounts라는 이름의 앱을 생성해준다
 
 ```bash
-$ python manage.py startapp articles
+$ python manage.py startapp board
 $ python manage.py startapp accounts
 ```
 
@@ -166,5 +180,20 @@ $ python manage.py runserver
 
 
 
+#### 협업 환경 (Github) 세팅하기 (선택)
 
+1. `.gitignore` 파일 만들기
 
+```bash
+$ touch .gitignore
+```
+
+2. `.gitignore` 파일에 필요한 것들을 <a href="https://www.toptal.com/developers/gitignore">gitignore.io</a> 웹사이트에서 찾아서 파일에 복사 / 붙여넣기 해서 추가한다: Python, Django, MacOS, Windows 정도 추가하면 이 프로젝트에서는 충분한 것 같다!
+3. Github 에서 새로운 repository를 생성한다
+4. 터미널 창에서 remote branch와 연결시켜준다
+
+```bash
+$ git remote add origin <remote 주소>
+```
+
+5. Inital add / commit / push를 해준다
