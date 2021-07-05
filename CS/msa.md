@@ -1,19 +1,48 @@
 # MSA (Micro-Service Architecture)
 
+기존의 **Monolithic Architecture**는 하나의 어플리케이션 안에 모든 로직들이 작성되어 있는 구조로 이루어져있다.
+
+모든 코드들이 한군데에 작성되있기 때문에 spaghetti식으로 코드들이 얼키고 설켜서 필요한 코드의 유지보수가 어렵다는것이 가장 큰 단점 중 하나였다.
+
+그 외에도 Monolithic Architecture에는 다음과 같은 단점들이 있었다
+
+- 개발/배포/유지보수가 어려움
+- 배포가 느림
+- 여러 개발자들과의 협업이 어려움
+- 새로운 시스템에 빠른 반영이 어려움
+- 사용자가 폭증함에 따라 확장하기 어려움
+- 신기술을 반영하기 어려움
+
+Monolithic Architecture의 한계를 극복하기 위해 다양한 모듈화를 할 수 있는 방법론들 (Component Based Development, Service Oriented Architecture) 이 나왔지만, 현재로써 가장 널리 쓰이고 있는 MSA가 등장하게 된다. 
+
+
+
 **MSA (Micro-Service Architecture)**란 하나의 큰 애플리케이션을 독립적이고 단순한 작은 컴포넌트 단위로 쪼개어 구축하는 아키텍쳐를 말한다.
 
-기존의 **Monolithic Architecture**는 하나의 어플리케이션 안에 모든 로직들이 작성되어 있는 구조로 이루어져있다.
+> The term "Microservice Architecture" has sprung up over the last few years to describe a particular way of designing software applications as a suites of *independently deployable services*.
+
+
 
 <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FvgBt5%2FbtqzCMNJlRr%2FMX0cps9msvAJaaoXKwApNK%2Fimg.jpg">
 
 
 
-### MSA vs. Monolithic (MSA와 Monolithic 아키텍쳐의 장단점)
+### MSA의 장단점
 
-|      | MSA                                                          | Monolithic                                                   |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 장점 | - 분산형 개발을 통해 빠른 개발이 가능<br />- <br />- 다른 서비스에 영향을 주지 않으면서 일부분을 유지/보수 가능<br />- 쉽게 확장 / 결합 가능<br />- 각각의 모듈이 단순화되있기 때문에 개발자가 서비스를 파악하기 용이 |                                                              |
-| 단점 | - 서비스 간의 통신 (다른 모듈에 있는 데이터를 받아서 쓰는것이 어려움)<br />- 서비스간의 통신을 위한 아키텍쳐 설계가 복잡함<br />- 장애가 발생한 경로 추적이 어렵고, 전체적인 모니터링이 힘듬 | - 개발/배포/유지보수가 어려움<br />- 여러 개발자들과의 협업이 어려움<br />- 새로운 시스템에 빠른 반영이 어려움<br />- 사용자가 폭증함에 따라 확장하기 어려움<br />- 신기술을 반영하기 어려움 |
+장점
+
+- 분산형 개발을 통해 빠른 개발이 가능
+- 다른 서비스에 영향을 주지 않으면서 일부분을 유지/보수 가능
+- 쉽게 확장 / 결합 가능
+- 각각의 모듈이 단순화되있기 때문에 개발자가 서비스를 파악하기 용이
+- 각 서비스 별로 최적화된 언어, DB를 개별적으로 사용 가능
+
+단점
+
+- 서비스 간의 통신 (다른 모듈에 있는 데이터를 받아서 쓰는것이 어려움)
+- 서비스간의 통신을 위한 아키텍쳐 설계가 복잡함
+- API 통신 비용 증가
+- 장애가 발생한 경로 추적이 어렵고, 전체적인 모니터링이 힘듬
 
 
 
