@@ -10,6 +10,8 @@
 - 새로운 시스템에 빠른 반영이 어려움
 - 사용자가 폭증함에 따라 확장하기 어려움
 - 신기술을 반영하기 어려움
+- 종속적인 라이브러리의 충돌
+- 최적화되지 않은 리소스 활용 (스케일링 시 불필요한 리소스도 같이 복제됨 - 메모리 낭비)
 
 Monolithic Architecture의 한계를 극복하기 위해 다양한 모듈화를 할 수 있는 방법론들 (Component Based Development, Service Oriented Architecture) 이 나왔지만, 현재로써 가장 널리 쓰이고 있는 MSA가 등장하게 된다. 
 
