@@ -38,18 +38,24 @@ $ docker cp tc:/test.txt ./test2.txt
 
 
 
-### 환경변수 설정
+### 복잡한 컨테이너 생성 예제
+
+##### 환경 변수 설정해서 mysql 컨테이너 생성
 
 ```bash
 $ docker run --name ms -e MYSQL_ROOT_PASSWORD=!qhdkscjfwj@ -d --rm mysql
 ```
 
+##### 볼륨 마운트 옵션 사용해서 로컬 파일 공유하기
 
-
-### 복잡한 컨테이너 생성 예제
-
-환경 변수를 설정해서 mysql 컨테이너 생성
+- Access type
+  - `ro`: 읽기 전용
+  - `rw`: 읽기 및 쓰기
 
 ```bash
+$ docker run -v <host_path>:<container_path>:<access_type>
 ```
 
+
+
+#### 

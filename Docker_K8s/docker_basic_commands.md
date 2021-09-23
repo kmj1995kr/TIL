@@ -122,3 +122,11 @@ $ docker rmi -f <image_name>
 $ docker rmi `docker images -q`
 ```
 
+
+
+#### 이미지 히스토리 확인
+
+```bash
+$ docker history
+```
+
