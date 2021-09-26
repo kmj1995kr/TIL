@@ -48,6 +48,8 @@ $ docker run --name ms -e MYSQL_ROOT_PASSWORD=!qhdkscjfwj@ -d --rm mysql
 
 ##### 볼륨 마운트 옵션 사용해서 로컬 파일 공유하기
 
+- 로컬에서 컨테이너로 파일을 옮기거나 공유하기 위해 쓰는 옵션이다
+
 - Access type
   - `ro`: 읽기 전용
   - `rw`: 읽기 및 쓰기
