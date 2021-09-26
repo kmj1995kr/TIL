@@ -1,4 +1,4 @@
-# 도커로 서비스 구축하기 (Full Cycle)
+# 도커로 Wordpress 서비스 구축하기 (Full Cycle)
 
 Word Press 서비스를 구축하는 전체 과정
 
