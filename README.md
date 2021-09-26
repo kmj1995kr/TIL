@@ -1,31 +1,11 @@
 # TIL     
-#### Topics that I've Learned (My Tech Stack)
+### :pencil: By Topic
 
-```
-Languages
-- Python
-- HTML / CSS / Javascript
-- Java
+### :calendar: By Date
 
-Frontend (Framework)
-- Vue
-- Bootstrap
+- 2021년 9월
+- 2021년 10월
 
-Backend
-- Django
-- Django REST Framework
-- JSP
-- Database (PL/SQL, MySQL)
-
-Serverside
-- Amazon AWS
-- Docker
-- Kubernetes
-
-Algorithm
-- Data Types and Usage
-- Sorting & Searching Algorithm
-```
 
 
 #### Remaining Items to Organize
@@ -52,5 +32,7 @@ Cloud - AWS
 
 Cloud - Docker / K8s
 ```
+
+
 
 Special thanks to Multicampus Cloud Buddies ❤️❤️❤️
