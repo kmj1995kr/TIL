@@ -37,7 +37,7 @@
 
 ### :calendar: By Date
 
-- [2021년 9월](./TIL_history.md###2021년 9월)
+- [2021년 9월](./TIL_history.md)
 - 2021년 10월
 
 
