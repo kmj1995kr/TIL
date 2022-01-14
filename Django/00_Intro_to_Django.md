@@ -80,11 +80,13 @@ $ pip install -r requirements.txt
 $ django-admin startproject <project_name>
 ```
 
-find_my_cafe 라는 이름의 프로젝트를 만드려면:
+find_my_cafe 라는 이름의 프로젝트를 만드려면 (새로 하위 폴더를 생성하는 것이 아닌 현재 디렉토리에서 프로젝트를 생성하려면 `.`을 끝에 추가해주면 된다):
 
 ```bash
-$ django-admin startproject find_my_cafe
+$ django-admin startproject find_my_cafe .
 ```
+
+
 
 
 
@@ -166,7 +168,8 @@ TEMPLATES = [
    AUTH_USER_MODEL = 'accounts.User'
    ```
 
-   
+
+
 
 #### 장고 서버 실행하기
 
@@ -197,3 +200,52 @@ $ git remote add origin <remote 주소>
 ```
 
 5. Inital add / commit / push를 해준다
+
+
+
+#### 환경 변수 관리 (선택)
+
+프로젝트를 git에 올리게되면 `SECRET_KEY` 와 같이 오픈된 환경에서는 노출되면 안되는 정보들이 있다. 이런 정보들을 배포하지 않고 로컬환경에만 관리할 수 있도록 환경 변수 설정을 해주는 라이브러리들이 장고에는 존재한다.
+
+Django-environ: https://django-environ.readthedocs.io/en/latest/
+
+1. `Django-environ` 설치
+
+```bash
+$ pip install django-environ
+```
+
+2. `settings.py` 상단에 아래 코드 추가
+
+```python
+import environ
+import os
+
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+
+# Set the project base directory
+# Change the original BASE_DIR to this line
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+```
+
+3. 환경변수를 저장할 `.env` 파일 생성 후 아래 코드 추가 (실제 `settings.py` 파일에서 SECRET_KEY를 가져와서 사용)
+
+```makefile
+DEBUG=True
+ALLOW_ROBOTS=False
+SECRET_KEY=secret
+ADMINS="John Doe <john@example.com>, Mary <mary@example.com>"
+MANAGERS="Blake <blake@cyb.org>, Alice Judge <alice@cyb.org>"
+SERVER_EMAIL=webmaster@example.com
+```
+
+4. `settings.py` 에서 `.env` 파일에 저장된 환경변수를 사용할 수 있도록 코드를 변경한다
+
+```python
+# delete existing SECRET_KEY and use this line instead
+SECRET_KEY = env('SECRET_KEY')
+```
+
