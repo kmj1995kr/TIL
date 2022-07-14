@@ -4,7 +4,7 @@
 
 > 1. Java가 다운로드 되어 있어야 한다 - 터미널에서 `java -version` 명령어로 확인
 >
-> 2. Maven이 다운로드 되어 있어야 한다 - 터미널에서 `mvn -v`  명령어로 확인
+> 2. Gradle이 다운로드 되어 있어야 한다 - 터미널에서 `gralde -version`  명령어로 확인
 > 3. Java 프로젝트를 실행할 수 있는 IDE (IntelliJ, Eclipse...) 중 하나가 설치되어 있어야 한다 - 나는 인텔리제이 사용 예정!
 
 
@@ -12,7 +12,16 @@
 ### 프로젝트 시작하기
 
 1. Create New Project 버튼을 클릭해 새 프로젝트를 생성한다
-   - Maven과 Gradle 중 더 익숙한 build tool을 사용해 Java 프로젝트를 생성한다
+
+![Screen Shot 2022-02-01 at 8.12.42 PM](assets/Screen Shot 2022-02-01 at 8.12.42 PM.png)
+
+
+
+프로젝트 생성 시 다음 항목을 확인하고 생성해주어야 된다.
+
+- 좌측 메뉴에 Maven / Gradle 중 사용할 빌드 툴 선택 (나 같은 경우 gradle 사용!)
+- Project SDK: 사용할 Java 버젼 선택
+- Additional Libraries and Framework: Java 선택
 
 ![Screen Shot 2021-08-28 at 10.31.16 PM](assets/Screen Shot 2021-08-28 at 10.31.16 PM.png)
 
@@ -20,6 +29,7 @@
 
 2. 프로젝트 설정을 해준다
    - Name: 프로젝트의 이름
+   - GroupId: 그룹 이름 - 메인 로직이 작성 될 코드가 들어있는 경로에 이름으로 지정된다
    - ArtifactId: 주로 프로젝트의 이름과 동일하고, 프로젝트의 루트 폴더도 같은 이름으로 기본적으로 세팅된다
 
 ![Screen Shot 2021-08-28 at 10.32.13 PM](assets/Screen Shot 2021-08-28 at 10.32.13 PM.png)

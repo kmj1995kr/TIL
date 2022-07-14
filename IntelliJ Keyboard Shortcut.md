@@ -10,9 +10,13 @@
 
 `cmd` + `option` + `v` : 타입에 맞게 변수 생성 및 이름 자동완성
 
+`ctrl` + `t` : refactoring 관련 메뉴 팝업 (e.g. extract method)
+
 `cmd` + `option` + `m` : 메서드 생성
 
 `option` + `enter` : 자동 import
+
+
 
 
 
