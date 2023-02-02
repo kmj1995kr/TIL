@@ -7,6 +7,21 @@
 | - 값이 저장된다<br />- 매개변수로 전달했을 경우 원본 값에는 영향을 주지 않는다 | - 주소값이 저장된다<br />-  매개변수로 전달했을 경우 주소값에 저장된 원본 값이 바뀐다<br />- Primitive Type이 아닌 모든 다른 타입들 |
 | - byte<br />- short / long<br />- int<br />- double<br />- float<br />- char<br />- boolean<br /> | - String<br />- Scanner<br />- Random<br />- int[]<br />- String[]<br />- object<br />- 사용자 정의 타입<br /> |
 
+### 변수 타입들의 세부적인 차이점
+
+**1. double vs. float**
+
+- double: 소수점 15-16자리까지 표현 가능 (8 bytes)
+- float: 소수점 6-7자리까지 표현 가능 (4 bytes), 변수 선언시에 숫자 뒤에 f를 붙여주어야함
+
+**2. long vs. int**
+
+- long: 8 bytes
+  - 자리수 구분을 위해 다음과 같이 숫자를 표기하여도, long타입으로 인식됨 (long l = 1_000_000_000_000L)
+- int: 20억 미만의 숫자만 표현 가능 (4 bytes)
+
+**3. double/float/long/int vs. Double/Float/Long/Integer**
+
 
 
 ### 기초적인 변수 선언 문법
@@ -46,6 +61,18 @@ public static void main(String[] args) {
 ```
 
 
+### 형 변환
+
+##### 숫자
+- 작은 범위에서 큰 범위로 갈때는 자동 형변환됨
+  (int -> long -> float -> double)
+- 큰 범위에서 작은 범위로 갈때는 명시적으로 형 변환을 해 주어야함
+  ex) (int) 98.8 -> 소수점 아래 자리들이 버려짐
+
+##### 문자열
+- String 또는 Integer / Double 클래스의 제공 메서드를 활용한면 된다
+  ex) String s1 = String.valueOf(93);  
+	 String s2 = Integer.toString(93);
 
 ### 변수의 적용 스코프
 
