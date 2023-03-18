@@ -55,6 +55,7 @@
 
 
 ### build.gradle 파일 파헤치기
+`build.gradle` 파일은 프로젝트 실행에 필요한 빌드 설정과 외부 의존성 패키지들의 대한 정보를 관리하는 파일이다.
 
 ```groovy
 plugins {
