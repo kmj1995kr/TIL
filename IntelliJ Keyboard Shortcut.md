@@ -17,6 +17,8 @@ Mac 기준 내가 개발을 하면서 유용하다고 느낀 IntelliJ 단축키 
 
 `cmd` + `option` + `l` : 코드 자동 정렬
 
+`ctrl` + `option` + `o` : 사용하지 않는 import 정리
+
 
 #### 2. 코드 자동 완성
 
