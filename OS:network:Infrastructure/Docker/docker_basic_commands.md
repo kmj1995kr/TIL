@@ -1,26 +1,29 @@
 # 도커 이미지 및 컨테이너 설치와 실행 기본 명령어
 
+#### 도커 데몬 실행하기
+도커 데몬을 최초 실행하기 위한 명령어 -- 
+`Cannot connect to the Docker daemon at unix:///Users/minji/.docker/run/docker.sock. Is the docker daemon running?` 와 같은 에러 메세지가 발생할때 아래 명령어로 도커 데몬을 실행하여 해결하면 된다
+```shell
+$ sudo service docker start
+```
 #### 도커 이미지 검색
 
 ```bash
 $ docker search <keyword>
 ```
 
-
-
 #### 도커 이미지 다운로드 / 삭제
 
 ```bash
-$ docker pull <image_name>
+$ docker image pull <image_name>
 ```
-
-
 
 #### 도커 이미지 확인
 
 ```bash
 # 이미지 전체 리스트 조회
 $ docker images
+$ docker image ls
 # 특정 이미지에 대한 정보 확인
 $ docker inspect <image_name>
 # 이미지 저장소 위치 확인
@@ -71,8 +74,6 @@ $ docker run -d -p 80:80 --name tc tomcat
 $ docker run -d -p <port> -rm --name <name> <image_name>
 ```
 
-
-
 #### 실행중인 컨테이너 확인
 
 ```bash
@@ -83,16 +84,12 @@ $ docker container ls
 $ docker ps -a -q
 ```
 
-
-
 #### 모든 컨테이너 확인
 
 ```bash
 $ docker ps -a
 $ docker container ls -a
 ```
-
-
 
 #### 컨테이너 중지 / 삭제
 
@@ -109,8 +106,6 @@ $ docker stop `docker ps -a -q`
 $ docker rm `docker ps -a -q`
 ```
 
-#### 
-
 #### 이미지 삭제
 
 컨테이너가 실행되고 있는 상황에서도 이미지는 삭제 가능 - 이런 경우 `-f` 옵션을 사용해서 삭제
@@ -122,11 +117,23 @@ $ docker rmi -f <image_name>
 $ docker rmi `docker images -q`
 ```
 
-
-
 #### 이미지 히스토리 확인
 
 ```bash
 $ docker history
 ```
 
+#### Docker Network
+docker container 간의 통신을 위한 리소스
+```bash
+# 네트워크 생성
+$ docker network create mysql
+
+# 네트워크 리스트 확인
+$ docker network ls
+```
+
+
+```shell
+$ docker compose up -d
+```

@@ -102,3 +102,13 @@ console.log(String({'fruit': 'apple'})) // [object Object]
 
 ##### 2. 숫자 (Number)로 변환하기
 
+
+### Truthy / Falsy
+Boolean 값 과는 별개로 "참"으로 인식되는 값, "거짓"으로 인식되는 값을 뜻한다
+
+#### Falsy 한 값들의 예제
+```
+null, undefined, 0, -0, NaN, ""
+```
+
+#### Truthy / Falsy 속성을 활용하여 null 체크를 하는 방법

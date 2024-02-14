@@ -57,7 +57,3 @@ $ docker run --name ms -e MYSQL_ROOT_PASSWORD=!qhdkscjfwj@ -d --rm mysql
 ```bash
 $ docker run -v <host_path>:<container_path>:<access_type>
 ```
-
-
-
-#### 
